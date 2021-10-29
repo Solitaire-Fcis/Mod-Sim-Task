@@ -1,5 +1,5 @@
 # Mod-Sim-Task
 ### To-Do-List
-- [ ] Highest Priority
+- [x] Highest Priority
 - [ ] Random
 - [ ] Least utilization 
