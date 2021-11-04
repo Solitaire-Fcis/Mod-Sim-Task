@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MultiQueueModels;
 using MultiQueueTesting;
+using System.IO;
 
 namespace MultiQueueSimulation
 {
@@ -16,10 +17,49 @@ namespace MultiQueueSimulation
     {
 
         List<DataGridView> tables = new List<DataGridView>();
-
+        string[] lines = File.ReadAllLines(@"TestCase1.txt");
+        SimulationSystem SS = new SimulationSystem();
+        TimeDistribution T = new TimeDistribution();
         public Form1()
         {
             InitializeComponent();
+            //Reading From file and assign to classes
+            for (int i=0;i<13;i++)
+            {
+                if (lines[i]== "NumberOfServers")
+                {
+                    SS.NumberOfServers = int.Parse(lines[i + 1]);
+                    serversText.Text = lines[i + 1];
+                }
+                if (lines[i] == "StoppingNumber")
+                {
+                    SS.StoppingNumber = int.Parse(lines[i + 1]);
+                    stoppingNum.Text = lines[i + 1];
+                }
+                if (lines[i] == "StoppingCriteria")
+                {
+                    criteriaText.Text = lines[i + 1];
+                }
+                if (lines[i] == "SelectionMethod")
+                {
+                    methodText.Text = lines[i + 1];
+                }
+
+            if (lines[i] == "InterarrivalDistribution")
+            {
+                    i++;
+                while (lines[i]!="")
+                {
+                        string[] num = lines[i].Split(',');
+                        T.Time = int.Parse(num[0]);
+                        T.Probability = decimal.Parse(num[1]);
+                        SS.InterarrivalDistribution.Add(T);
+                        i++;
+                }
+                    break;
+            }
+            }
+
         }
 
         private void label3_Click(object sender, EventArgs e)

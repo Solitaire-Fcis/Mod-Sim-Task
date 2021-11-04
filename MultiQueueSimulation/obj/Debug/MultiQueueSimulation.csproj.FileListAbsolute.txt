@@ -96,3 +96,15 @@ C:\Users\aaesh\Downloads\Lab 2\Lab 2 - Task 1\Template_Students\MultiQueueSimula
 C:\Users\aaesh\Downloads\Lab 2\Lab 2 - Task 1\Template_Students\MultiQueueSimulation\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csproj.CoreCompileInputs.cache
 C:\Users\aaesh\Downloads\Lab 2\Lab 2 - Task 1\Template_Students\MultiQueueSimulation\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.exe
 C:\Users\aaesh\Downloads\Lab 2\Lab 2 - Task 1\Template_Students\MultiQueueSimulation\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.pdb
+E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueSimulation.exe.config
+E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueSimulation.exe
+E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueSimulation.pdb
+E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueModels.dll
+E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueModels.pdb
+E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csproj.AssemblyReference.cache
+E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.Form1.resources
+E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.Properties.Resources.resources
+E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csproj.GenerateResource.cache
+E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csproj.CoreCompileInputs.cache
+E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.exe
+E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.pdb
