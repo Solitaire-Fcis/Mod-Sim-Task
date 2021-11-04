@@ -1,6 +1,6 @@
 # Mod-Sim-Task
 ### To-Do-List
-- [ ] GUI
+- [x] GUI
 - [ ] Reading From Files
 - [ ] Highest Priority
 - [ ] Random
