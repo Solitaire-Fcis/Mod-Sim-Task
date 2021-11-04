@@ -36,7 +36,7 @@
             this.criteriaText = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.stoppingNum = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.interarrivalTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.probability = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,12 +113,12 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Stopping Number";
             // 
-            // textBox4
+            // stoppingNum
             // 
-            this.textBox4.Location = new System.Drawing.Point(109, 101);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(23, 20);
-            this.textBox4.TabIndex = 8;
+            this.stoppingNum.Location = new System.Drawing.Point(109, 101);
+            this.stoppingNum.Name = "stoppingNum";
+            this.stoppingNum.Size = new System.Drawing.Size(23, 20);
+            this.stoppingNum.TabIndex = 8;
             // 
             // dataGridView1
             // 
@@ -128,9 +128,9 @@
             this.probability,
             this.cumulativeProbability,
             this.range});
-            this.dataGridView1.Location = new System.Drawing.Point(149, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(147, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(443, 155);
+            this.dataGridView1.Size = new System.Drawing.Size(443, 183);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -156,9 +156,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(22, 134);
+            this.button1.Location = new System.Drawing.Point(350, 244);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(98, 54);
             this.button1.TabIndex = 11;
             this.button1.Text = "proceed";
             this.button1.UseVisualStyleBackColor = true;
@@ -171,7 +171,7 @@
             this.ClientSize = new System.Drawing.Size(863, 373);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.stoppingNum);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.criteriaText);
@@ -199,7 +199,7 @@
         private System.Windows.Forms.TextBox criteriaText;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox stoppingNum;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn interarrivalTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn probability;
