@@ -38,10 +38,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.stoppingNum = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.interarrivalTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.probability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cumulativeProbability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.range = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -94,6 +90,7 @@
             // 
             // criteriaText
             // 
+            this.criteriaText.Enabled = false;
             this.criteriaText.Location = new System.Drawing.Point(109, 75);
             this.criteriaText.Name = "criteriaText";
             this.criteriaText.ReadOnly = true;
@@ -120,6 +117,7 @@
             // 
             // stoppingNum
             // 
+            this.stoppingNum.Enabled = false;
             this.stoppingNum.Location = new System.Drawing.Point(109, 101);
             this.stoppingNum.Name = "stoppingNum";
             this.stoppingNum.ReadOnly = true;
@@ -129,36 +127,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.interarrivalTime,
-            this.probability,
-            this.cumulativeProbability,
-            this.range});
-            this.dataGridView1.Location = new System.Drawing.Point(147, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(149, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(443, 183);
+            this.dataGridView1.Size = new System.Drawing.Size(545, 183);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // interarrivalTime
-            // 
-            this.interarrivalTime.HeaderText = "Interarrival Time";
-            this.interarrivalTime.Name = "interarrivalTime";
-            // 
-            // probability
-            // 
-            this.probability.HeaderText = "Probability";
-            this.probability.Name = "probability";
-            // 
-            // cumulativeProbability
-            // 
-            this.cumulativeProbability.HeaderText = "Cumulative Probability";
-            this.cumulativeProbability.Name = "cumulativeProbability";
-            // 
-            // range
-            // 
-            this.range.HeaderText = "Range";
-            this.range.Name = "range";
             // 
             // button1
             // 
@@ -207,10 +180,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox stoppingNum;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn interarrivalTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn probability;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cumulativeProbability;
-        private System.Windows.Forms.DataGridViewTextBoxColumn range;
         private System.Windows.Forms.Button button1;
     }
 }

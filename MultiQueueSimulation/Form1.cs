@@ -19,12 +19,15 @@ namespace MultiQueueSimulation
         List<DataGridView> tables = new List<DataGridView>();
         string[] lines = File.ReadAllLines(@"TestCase1.txt");
         SimulationSystem SS = new SimulationSystem();
-        TimeDistribution T = new TimeDistribution();
+        Server S = new Server();
+        //variable to calculate CummProp
+        decimal sumprop=0;
+        int minr=1;
         public Form1()
         {
             InitializeComponent();
             //Reading From file and assign to classes
-            for (int i=0;i<13;i++)
+            for (int i=0;i<lines.Length;i++)
             {
                 if (lines[i]== "NumberOfServers")
                 {
@@ -43,22 +46,38 @@ namespace MultiQueueSimulation
                 if (lines[i] == "SelectionMethod")
                 {
                     methodText.Text = lines[i + 1];
-                }
 
-            if (lines[i] == "InterarrivalDistribution")
-            {
-                    i++;
-                while (lines[i]!="")
+                }
+                if (lines[i] == "InterarrivalDistribution")
                 {
+                    i++;
+                    while (lines[i]!="")
+                    {
+                        TimeDistribution T = new TimeDistribution();
                         string[] num = lines[i].Split(',');
                         T.Time = int.Parse(num[0]);
                         T.Probability = decimal.Parse(num[1]);
+                        sumprop+=decimal.Parse(num[1]);
+                        T.CummProbability=sumprop;
+                        T.MinRange = minr;
+                        T.MaxRange = Convert.ToInt32((sumprop*100));
                         SS.InterarrivalDistribution.Add(T);
+                        minr = T.MaxRange+1;
                         i++;
+                    }
                 }
-                    break;
             }
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Time");
+            dt.Columns.Add("Probability");
+            dt.Columns.Add("CummProbability");
+            dt.Columns.Add("MinRange");
+            dt.Columns.Add("MaxRange");
+            foreach (var item in SS.InterarrivalDistribution)
+            {
+                dt.Rows.Add(item.Time,item.Probability,item.CummProbability,item.MinRange,item.MaxRange);
             }
+            dataGridView1.DataSource = dt;
 
         }
 
