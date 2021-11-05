@@ -19,10 +19,9 @@ namespace MultiQueueSimulation
         List<DataGridView> tables = new List<DataGridView>();
         string[] lines = File.ReadAllLines(@"TestCase1.txt");
         SimulationSystem SS = new SimulationSystem();
-        Server S = new Server();
         //variable to calculate CummProp
         decimal sumprop=0;
-        int minr=1;
+        int minr=1,index;
         public Form1()
         {
             InitializeComponent();
@@ -65,6 +64,10 @@ namespace MultiQueueSimulation
                         minr = T.MaxRange+1;
                         i++;
                     }
+                    index = i;
+                    sumprop = 0;
+                    minr = 1;
+                    break;
                 }
             }
             DataTable dt = new DataTable();
@@ -99,23 +102,52 @@ namespace MultiQueueSimulation
 
             int grid_y = 20;
             int label_y = 5;
+            int servernumber = 1;
+            Server S = new Server();
 
+            for (int i = index; i < lines.Length; i++)
+            {
+                if (lines[i] == $"ServiceDistribution_Server{servernumber}")
+                {
+                    i++;
+                    while (lines[i] != "")
+                    {
+                        TimeDistribution T = new TimeDistribution();
+                        string[] num = lines[i].Split(',');
+                        T.Time = int.Parse(num[0]);
+                        T.Probability = decimal.Parse(num[1]);
+                        sumprop += decimal.Parse(num[1]);
+                        T.CummProbability = sumprop;
+                        T.MinRange = minr;
+                        T.MaxRange = Convert.ToInt32((sumprop * 100));
+                        S.TimeDistribution.Add(T);
+                        minr = T.MaxRange + 1;
+                        i++;
+                    }
+                }
+            }
 
             for (int i = 0; i < int.Parse(serversText.Text); i++)
             {
                 Label label = new Label();
                 DataGridView table = new DataGridView();
 
-                table.ColumnCount = 4;
+                table.ColumnCount = 5;
                 table.Columns[0].HeaderText = "Service Time";
                 table.Columns[1].HeaderText = "Probability";
                 table.Columns[2].HeaderText = "Cumulative Probability";
-                table.Columns[3].HeaderText = "Range";
+                table.Columns[3].HeaderText = "MinRange";
+                table.Columns[4].HeaderText = "MaxRange";
+                foreach (var item in S.TimeDistribution)
+                {
+                    table.Rows.Add(item.Time, item.Probability, item.CummProbability, item.MinRange, item.MaxRange);
+                }
 
                 table.Columns[0].Name = "serviceTime";
                 table.Columns[1].Name = "probability";
                 table.Columns[2].Name = "cumulativeProbability";
-                table.Columns[3].Name = "range";
+                table.Columns[3].Name = "minrange";
+                table.Columns[4].Name = "maxrange";
 
                 label.Text = "Server " + (i + 1).ToString();
 
@@ -140,6 +172,7 @@ namespace MultiQueueSimulation
                 form.Controls.Add(table);
                 form.Controls.Add(label);
             }
+          
 
             Button button = new Button();
 
