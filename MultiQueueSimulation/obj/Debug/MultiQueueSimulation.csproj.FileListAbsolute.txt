@@ -108,3 +108,16 @@ E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\Mul
 E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csproj.CoreCompileInputs.cache
 E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.exe
 E:\My Study\Study 4th Year\Tasks\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.pdb
+D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueSimulation.exe.config
+D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueSimulation.exe
+D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueSimulation.pdb
+D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueModels.dll
+D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueModels.pdb
+D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csprojAssemblyReference.cache
+D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.Form1.resources
+D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.Properties.Resources.resources
+D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csproj.GenerateResource.cache
+D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csproj.CoreCompileInputs.cache
+D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csproj.CopyComplete
+D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.exe
+D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.pdb

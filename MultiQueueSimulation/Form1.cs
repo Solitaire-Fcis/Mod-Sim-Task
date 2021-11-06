@@ -16,12 +16,23 @@ namespace MultiQueueSimulation
     public partial class Form1 : Form
     {
 
+        // For Generating Random Numbers
+        private readonly Random _random = new Random();
+        // Generates a random number within a range.      
+        public int RandomNumber(int min, int max)
+        {
+            return _random.Next(min, max);
+        }
+
+
+
         List<DataGridView> tables = new List<DataGridView>();
         string[] lines = File.ReadAllLines(@"TestCase1.txt");
         SimulationSystem SS = new SimulationSystem();
         //variable to calculate CummProp
         decimal sumprop=0;
         int minr=1,index;
+
         public Form1()
         {
             InitializeComponent();
@@ -102,15 +113,18 @@ namespace MultiQueueSimulation
 
             int grid_y = 20;
             int label_y = 5;
-            int servernumber = 1;
-            Server S = new Server();
 
-            for (int i = index; i < lines.Length; i++)
+            int servernumber = 1;
+            SS.NumberOfServers = int.Parse(serversText.Text);
+            //Server S = new Server();
+
+            for (int i = index+1; i < lines.Length; i++)
             {
                 if (lines[i] == $"ServiceDistribution_Server{servernumber}")
                 {
                     i++;
-                    while (lines[i] != "")
+                    Server S = new Server();
+                    while (i != lines.Length && lines[i] != "")
                     {
                         TimeDistribution T = new TimeDistribution();
                         string[] num = lines[i].Split(',');
@@ -124,10 +138,13 @@ namespace MultiQueueSimulation
                         minr = T.MaxRange + 1;
                         i++;
                     }
+                    S.ID = servernumber;
+                    SS.Servers.Add(S);
                 }
+                servernumber++;
             }
 
-            for (int i = 0; i < int.Parse(serversText.Text); i++)
+            for (int i = 0; i < SS.NumberOfServers; i++)
             {
                 Label label = new Label();
                 DataGridView table = new DataGridView();
@@ -138,10 +155,11 @@ namespace MultiQueueSimulation
                 table.Columns[2].HeaderText = "Cumulative Probability";
                 table.Columns[3].HeaderText = "MinRange";
                 table.Columns[4].HeaderText = "MaxRange";
-                foreach (var item in S.TimeDistribution)
-                {
+
+                
+                foreach (var item in SS.Servers[i].TimeDistribution)
                     table.Rows.Add(item.Time, item.Probability, item.CummProbability, item.MinRange, item.MaxRange);
-                }
+                
 
                 table.Columns[0].Name = "serviceTime";
                 table.Columns[1].Name = "probability";
@@ -217,9 +235,94 @@ namespace MultiQueueSimulation
             table.Columns[8].Name = "Service Index";
             table.Columns[9].Name = "Time in Queue";
 
-            for(int i=1; i<=int.Parse(stoppingNum.Text); i++)
+            int arrivalTime = 0;
+            int queue_time = 0;
+            for (int i=0; i < int.Parse(stoppingNum.Text); i++)
             {
-                table.Rows.Add(i, "", "", "", "", "", "", "", "", "");
+                queue_time = 0;
+                int service_rand = this.RandomNumber(1, 100);
+                int serverTime = 0;
+
+
+                int arrival_rand = this.RandomNumber(1, 100);
+                int InterarrivalTime = 0;
+                TimeDistribution time_dist = new TimeDistribution();
+
+                //Computing InterArrival Time
+                foreach (var item in SS.InterarrivalDistribution)
+                    if (arrival_rand >= item.MinRange && arrival_rand <= item.MaxRange)
+                    {
+                        time_dist = item;
+                        break;
+                    }
+                InterarrivalTime = time_dist.Time;
+                arrivalTime += InterarrivalTime;
+
+                Server workingServer = new Server();
+                if (i == 0)
+                    workingServer = SS.Servers[0];
+                else
+                {
+                    foreach (var server in SS.Servers)
+                    {
+                        if (arrivalTime < server.FinishTime)
+                        {
+                            workingServer = server;
+                            break;
+                        }
+
+                    }
+
+
+                    if (workingServer.ID == 0)
+                    {
+                        int min_time = 1000000000;
+                        int index = 0;
+
+                        for (int j = 0; j < SS.NumberOfServers; j++)
+                        {
+                            if (min_time > SS.Servers[j].FinishTime)
+                            {
+                                min_time = SS.Servers[j].FinishTime;
+                                index = j;
+                            }
+                        }
+                        workingServer = SS.Servers[index];
+                        workingServer.FinishTime = SS.Servers[index].FinishTime;
+                        queue_time = workingServer.FinishTime - arrivalTime;
+                    }
+                }
+
+                //Computing Service Time
+                foreach (var item in workingServer.TimeDistribution)
+                    if (service_rand >= item.MinRange && service_rand <= item.MaxRange)
+                    {
+                        time_dist = item;
+                        break;
+                    }
+                serverTime = time_dist.Time;
+                workingServer.FinishTime = arrivalTime + serverTime;
+
+                foreach (var server in SS.Servers)
+                    if (workingServer.ID == server.ID)
+                    {
+                        server.FinishTime = workingServer.FinishTime;
+                        break;
+                    }
+
+                string arrival_rand_str = arrival_rand.ToString();
+                string InterarrivalTime_str = InterarrivalTime.ToString();
+
+                if (i == 0)
+                {
+                    arrival_rand_str = "-";
+                    InterarrivalTime_str = "-";
+                }
+
+
+                table.Rows.Add(i + 1, arrival_rand_str, InterarrivalTime_str, arrivalTime, 
+                    service_rand, arrivalTime, time_dist.Time, workingServer.FinishTime, 
+                    workingServer.ID, queue_time);
             }
 
             table.Width = 1065;
