@@ -235,20 +235,27 @@ namespace MultiQueueSimulation
             table.Columns[8].Name = "Service Index";
             table.Columns[9].Name = "Time in Queue";
 
+            // Highest Priority Algorithm
             int arrivalTime = 0;
             int queue_time = 0;
             for (int i=0; i < int.Parse(stoppingNum.Text); i++)
             {
+                // sets the queue time to Zero
                 queue_time = 0;
+                
+                //Service Random 
                 int service_rand = this.RandomNumber(1, 100);
                 int serverTime = 0;
 
-
+                //Arrival Random
                 int arrival_rand = this.RandomNumber(1, 100);
                 int InterarrivalTime = 0;
-                TimeDistribution time_dist = new TimeDistribution();
 
-                //Computing InterArrival Time
+
+                TimeDistribution time_dist = new TimeDistribution();
+                Server workingServer = new Server();
+
+                //Computing InterArrival Time and Arrival Time
                 foreach (var item in SS.InterarrivalDistribution)
                     if (arrival_rand >= item.MinRange && arrival_rand <= item.MaxRange)
                     {
@@ -258,13 +265,14 @@ namespace MultiQueueSimulation
                 InterarrivalTime = time_dist.Time;
                 arrivalTime += InterarrivalTime;
 
-                Server workingServer = new Server();
+
                 if (i == 0)
                     workingServer = SS.Servers[0];
                 else
                 {
                     foreach (var server in SS.Servers)
                     {
+                        //check if any server is an idle
                         if (arrivalTime < server.FinishTime)
                         {
                             workingServer = server;
@@ -273,12 +281,13 @@ namespace MultiQueueSimulation
 
                     }
 
-
+                    // if all servers are busy
                     if (workingServer.ID == 0)
                     {
                         int min_time = 1000000000;
                         int index = 0;
 
+                        //get the Server whhich has the minimum the finish time
                         for (int j = 0; j < SS.NumberOfServers; j++)
                         {
                             if (min_time > SS.Servers[j].FinishTime)
@@ -303,13 +312,7 @@ namespace MultiQueueSimulation
                 serverTime = time_dist.Time;
                 workingServer.FinishTime = arrivalTime + serverTime;
 
-                foreach (var server in SS.Servers)
-                    if (workingServer.ID == server.ID)
-                    {
-                        server.FinishTime = workingServer.FinishTime;
-                        break;
-                    }
-
+                // transforming To String
                 string arrival_rand_str = arrival_rand.ToString();
                 string InterarrivalTime_str = InterarrivalTime.ToString();
 
@@ -319,7 +322,7 @@ namespace MultiQueueSimulation
                     InterarrivalTime_str = "-";
                 }
 
-
+                //Add row to the table
                 table.Rows.Add(i + 1, arrival_rand_str, InterarrivalTime_str, arrivalTime, 
                     service_rand, arrivalTime, time_dist.Time, workingServer.FinishTime, 
                     workingServer.ID, queue_time);
