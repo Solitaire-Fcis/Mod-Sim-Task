@@ -45,9 +45,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 20);
+            this.label1.Location = new System.Drawing.Point(13, 588);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
+            this.label1.Size = new System.Drawing.Size(141, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Number of Servers";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -55,17 +56,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 47);
+            this.label2.Location = new System.Drawing.Point(12, 72);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 75);
+            this.label3.Location = new System.Drawing.Point(1033, 588);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 13);
+            this.label3.Size = new System.Drawing.Size(127, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Stopping Criteria";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -73,71 +76,80 @@
             // serversText
             // 
             this.serversText.Enabled = false;
-            this.serversText.Location = new System.Drawing.Point(109, 21);
+            this.serversText.Location = new System.Drawing.Point(162, 588);
+            this.serversText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.serversText.Name = "serversText";
             this.serversText.ReadOnly = true;
-            this.serversText.Size = new System.Drawing.Size(23, 20);
+            this.serversText.Size = new System.Drawing.Size(57, 26);
             this.serversText.TabIndex = 3;
             // 
             // methodText
             // 
             this.methodText.Enabled = false;
-            this.methodText.Location = new System.Drawing.Point(109, 47);
+            this.methodText.Location = new System.Drawing.Point(615, 585);
+            this.methodText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.methodText.Name = "methodText";
             this.methodText.ReadOnly = true;
-            this.methodText.Size = new System.Drawing.Size(23, 20);
+            this.methodText.Size = new System.Drawing.Size(57, 26);
             this.methodText.TabIndex = 4;
             // 
             // criteriaText
             // 
             this.criteriaText.Enabled = false;
-            this.criteriaText.Location = new System.Drawing.Point(109, 75);
+            this.criteriaText.Location = new System.Drawing.Point(1179, 585);
+            this.criteriaText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.criteriaText.Name = "criteriaText";
             this.criteriaText.ReadOnly = true;
-            this.criteriaText.Size = new System.Drawing.Size(23, 20);
+            this.criteriaText.Size = new System.Drawing.Size(57, 26);
             this.criteriaText.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 47);
+            this.label4.Location = new System.Drawing.Point(474, 588);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 13);
+            this.label4.Size = new System.Drawing.Size(133, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Selection Method";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 101);
+            this.label5.Location = new System.Drawing.Point(1421, 588);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 13);
+            this.label5.Size = new System.Drawing.Size(133, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Stopping Number";
             // 
             // stoppingNum
             // 
             this.stoppingNum.Enabled = false;
-            this.stoppingNum.Location = new System.Drawing.Point(109, 101);
+            this.stoppingNum.Location = new System.Drawing.Point(1562, 585);
+            this.stoppingNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.stoppingNum.Name = "stoppingNum";
             this.stoppingNum.ReadOnly = true;
-            this.stoppingNum.Size = new System.Drawing.Size(23, 20);
+            this.stoppingNum.Size = new System.Drawing.Size(57, 26);
             this.stoppingNum.TabIndex = 8;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(149, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 14);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(545, 183);
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.Size = new System.Drawing.Size(1673, 512);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(350, 244);
+            this.button1.Location = new System.Drawing.Point(732, 674);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 54);
+            this.button1.Size = new System.Drawing.Size(200, 43);
             this.button1.TabIndex = 11;
             this.button1.Text = "proceed";
             this.button1.UseVisualStyleBackColor = true;
@@ -145,9 +157,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 373);
+            this.ClientSize = new System.Drawing.Size(1706, 775);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.stoppingNum);
@@ -159,7 +171,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

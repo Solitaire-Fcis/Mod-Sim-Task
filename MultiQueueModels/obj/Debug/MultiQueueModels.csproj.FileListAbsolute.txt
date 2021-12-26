@@ -46,3 +46,8 @@ D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueModels\obj\
 D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueModels\obj\Debug\MultiQueueModels.csproj.CoreCompileInputs.cache
 D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueModels\obj\Debug\MultiQueueModels.dll
 D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueModels\obj\Debug\MultiQueueModels.pdb
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueModels\bin\Debug\MultiQueueModels.dll
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueModels\bin\Debug\MultiQueueModels.pdb
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueModels\obj\Debug\MultiQueueModels.csproj.CoreCompileInputs.cache
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueModels\obj\Debug\MultiQueueModels.dll
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueModels\obj\Debug\MultiQueueModels.pdb

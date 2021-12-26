@@ -121,3 +121,16 @@ D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\
 D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csproj.CopyComplete
 D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.exe
 D:\University\4th\Projects & Tasks\Simulation\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.pdb
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueSimulation.exe.config
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueSimulation.exe
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueSimulation.pdb
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueModels.dll
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueSimulation\bin\Debug\MultiQueueModels.pdb
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csprojAssemblyReference.cache
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.Properties.Resources.resources
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csproj.GenerateResource.cache
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csproj.CoreCompileInputs.cache
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.csproj.CopyComplete
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.exe
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.pdb
+E:\Work\FCIS\4th Year\CS\Modeling and Simulation\Tasks\MOD-TASK-1\Mod-Sim-Task\MultiQueueSimulation\obj\Debug\MultiQueueSimulation.ServerMeasures.resources
