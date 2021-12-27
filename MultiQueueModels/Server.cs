@@ -11,6 +11,8 @@ namespace MultiQueueModels
         public Server()
         {
             this.TimeDistribution = new List<TimeDistribution>();
+            this.ID = 0;
+            this.FinishTime = 0;
         }
 
         public int ID { get; set; }

@@ -1,7 +1,7 @@
 # Mod-Sim-Task
 ### To-Do-List
-- [ ] GUI
-- [ ] Reading From Files
+- [x] GUI
+- [x] Reading From Files
 - [ ] Highest Priority
 - [ ] Random
 - [ ] Least utilization 
